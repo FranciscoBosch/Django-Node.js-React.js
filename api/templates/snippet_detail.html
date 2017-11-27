@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% load rest_framework %}
+
+{% block content %}
+
+<h1>Snippet - {{ snippet.title }}</h1>
+
+<form action="{% url 'snippet-detail' pk=snippet.pk %}" method="POST">
+    {% csrf_token %}
+    {% render_form serializer  template_pack='rest_framework/vertical' %}
+    <input type="submit" value="Save">
+</form>
+<div>
+  {% autoescape off %}{{ formatted_code }}{% endautoescape %}
+</div>
+
+{% endblock %}
