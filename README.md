@@ -4,7 +4,7 @@
 The project can be setup using the following procedure
 
 - Clone the project
-``git clone https://github.com/zahidirfan/CommentsRemover.git``
+``git clone https://github.com/FranciscoBosch/Django-Node.js-React.js.git``
 
 - Create the virtual environment by using the following command
  ```
